@@ -11,6 +11,7 @@ import {
   AvatarImage,
 } from "~/common/components/ui/avatar";
 import { Button } from "~/common/components/ui/button";
+import { DotIcon } from "lucide-react";
 
 interface DiscussionCardProps {
   postId: string;
@@ -42,15 +43,13 @@ export function DiscussionCard({
             <div className="flex gap-2 text-xs leading-tight text-muted-foreground">
               <span>{authorName} on</span>
               <span>{categoryName}</span>
-              <span>•</span>
+              <DotIcon className="w-4, h-4" />
               <span className="whitespace-nowrap">{timeAgo}</span>
             </div>
           </div>
         </CardHeader>
         <CardFooter className="flex justify-end bg-transparent border-t-0">
-          <Button variant="link" asChild>
-            <Link to={`/community/${postId}`}>Reply &rarr;</Link>
-          </Button>
+          <Button variant={"ghost"}>Reply &rarr;</Button>
         </CardFooter>
       </Card>
     </Link>
