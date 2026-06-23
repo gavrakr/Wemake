@@ -32,6 +32,8 @@ import {
   MessageCircleIcon,
 } from "lucide-react";
 
+import myimg from "../../uploads/file_0.jpg";
+
 const menus = [
   {
     name: "Products",
@@ -232,7 +234,7 @@ export function Navigation({
                 <AvatarFallback>
                   <span className="text-xs">Test</span>
                 </AvatarFallback>
-                <AvatarImage src="../../../uploads/file_0.jpg" />
+                <AvatarImage src={myimg} />
               </Avatar>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56">
